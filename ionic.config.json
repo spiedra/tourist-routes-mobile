@@ -1,0 +1,8 @@
+{
+  "name": "tourist-routes-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "e290a360"
+}
