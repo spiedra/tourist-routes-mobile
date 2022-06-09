@@ -2,7 +2,7 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
+import Home from './pages/Home/Index';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,6 +22,11 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import NotFound from './pages/NotFound/Index';
+import TouristRoutes from './pages/TouristRoutes/Index';
+import SiteMap from './pages/SiteMap/index';
+import AboutUs from './pages/AboutUs/Index';
+import ContactUs from './pages/ContactUs/Index';
 
 setupIonicReact();
 
@@ -33,16 +38,38 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
+              <Redirect to="/page/Home" />
             </Route>
-            <Route path="/page/:name" exact={true}>
-              <Page />
+            <Route path="/page/home" exact={true}>
+              <Home />
             </Route>
+            <Route path="/page/tourist-routes" exact={true}>
+              <TouristRoutes />
+            </Route>
+            <Route path="/page/site-map" exact={true}>
+              <SiteMap />
+            </Route>
+            <Route path="/page/about-us" exact={true}>
+              <AboutUs />
+            </Route>
+            <Route path="/page/contact-us" exact={true}>
+              <ContactUs />
+            </Route>
+            <Route path="/" exact={true}>
+              <NotFound />
+            </Route>
+            
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
     </IonApp>
   );
 };
+
+/**
+ * <Route path="/page/:name" exact={true}>
+              <Page />
+            </Route>
+ */
 
 export default App;
