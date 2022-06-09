@@ -1,7 +1,5 @@
 # Recommendation of tourist routes - Mobile
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## About
 
 This is a university project in which tourist routes are recommended using Euclidean distance calculation and the Naive Bayes algorithm.
