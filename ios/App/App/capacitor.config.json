@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "tourist-routes-mobile",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
