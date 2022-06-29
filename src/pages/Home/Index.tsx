@@ -17,18 +17,14 @@ import Modal from "../../components/Modal";
 const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const modalBody = (
-    <div>
-      <h1>HOla como estas?</h1>
-    </div>
-  )
 
+  
   return (
     <>
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        content={modalBody}
+        content={'eh dude'}
       />
 
       <IonPage>
