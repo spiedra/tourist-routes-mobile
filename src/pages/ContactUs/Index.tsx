@@ -8,17 +8,17 @@ import {
   IonPage,
   IonRow,
   IonTextarea,
-} from '@ionic/react'
-import Header from '../../components/Header/Header'
+} from "@ionic/react";
+import Header from "../../components/Header/Header";
 
 const ContactUs: React.FC = () => {
   return (
     <IonPage>
-      <Header title='Contactenos' />
+      <Header title="Contactenos" />
       <IonContent>
-        <IonGrid className='ion-justify-content-center'>
-          <IonRow className='ion-justify-content-center'>
-            <IonCol size='11' sizeLg='8' className='ion-text-justify'>
+        <IonGrid className="ion-justify-content-center">
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="11" sizeLg="8" className="ion-text-justify">
               <p>
                 Arriésgate a tomar la mejor aventura de tu vida. Por favor,
                 ponte en contacto con nosotros. ¿Cómo podemos ayudarte? ¿Qué es
@@ -26,30 +26,30 @@ const ContactUs: React.FC = () => {
               </p>
             </IonCol>
           </IonRow>
-          <IonRow className='ion-justify-content-center'>
-            <IonCol size='12' sizeLg='8'>
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="12" sizeLg="8">
               <IonItem>
-                <IonLabel color='tertiary' position='floating'>
+                <IonLabel color="tertiary" position="floating">
                   Nombre
                 </IonLabel>
-                <IonInput type='text'></IonInput>
+                <IonInput type="text"></IonInput>
               </IonItem>
             </IonCol>
           </IonRow>
-          <IonRow className='ion-justify-content-center'>
-            <IonCol size='12' sizeLg='8'>
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="12" sizeLg="8">
               <IonItem>
-                <IonLabel color='tertiary' position='floating'>
+                <IonLabel color="tertiary" position="floating">
                   Correo electronico
                 </IonLabel>
-                <IonInput type='email'></IonInput>
+                <IonInput type="email"></IonInput>
               </IonItem>
             </IonCol>
           </IonRow>
-          <IonRow className='ion-justify-content-center'>
-            <IonCol size='12' sizeLg='8'>
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="12" sizeLg="8">
               <IonItem>
-                <IonLabel color='tertiary' position='floating'>
+                <IonLabel color="tertiary" position="floating">
                   ¿De dónde nos visitas?
                 </IonLabel>
                 <IonTextarea></IonTextarea>
@@ -59,7 +59,7 @@ const ContactUs: React.FC = () => {
         </IonGrid>
       </IonContent>
     </IonPage>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

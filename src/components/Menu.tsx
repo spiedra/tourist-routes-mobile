@@ -7,11 +7,22 @@ import {
   IonListHeader,
   IonMenu,
   IonMenuToggle,
-} from '@ionic/react';
+} from "@ionic/react";
 
-import { useLocation } from 'react-router-dom';
-import { homeOutline, homeSharp, airplaneOutline, airplaneSharp, mapOutline, mapSharp, helpOutline, helpSharp, mailOutline, mailSharp } from 'ionicons/icons';
-import './Menu.css';
+import { useLocation } from "react-router-dom";
+import {
+  homeOutline,
+  homeSharp,
+  airplaneOutline,
+  airplaneSharp,
+  mapOutline,
+  mapSharp,
+  helpOutline,
+  helpSharp,
+  mailOutline,
+  mailSharp,
+} from "ionicons/icons";
+import "./Menu.css";
 
 interface AppPage {
   url: string;
@@ -22,37 +33,36 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inicio',
-    url: '/page/home',
+    title: "Inicio",
+    url: "/page/home",
     iosIcon: homeOutline,
-    mdIcon: homeSharp
+    mdIcon: homeSharp,
   },
   {
-    title: 'Rutas Turísticas',
-    url: '/page/tourist-routes',
+    title: "Rutas Turísticas",
+    url: "/page/tourist-routes",
     iosIcon: airplaneOutline,
-    mdIcon: airplaneSharp
+    mdIcon: airplaneSharp,
   },
   {
-    title: 'Mapa del sitio',
-    url: '/page/site-map',
+    title: "Mapa del sitio",
+    url: "/page/site-map",
     iosIcon: mapOutline,
-    mdIcon: mapSharp
+    mdIcon: mapSharp,
   },
   {
-    title: 'Acerca de nosotros',
-    url: '/page/about-us',
+    title: "Acerca de nosotros",
+    url: "/page/about-us",
     iosIcon: helpOutline,
-    mdIcon: helpSharp
+    mdIcon: helpSharp,
   },
   {
-    title: 'Contáctanos',
-    url: '/page/contact-us',
+    title: "Contáctanos",
+    url: "/page/contact-us",
     iosIcon: mailOutline,
-    mdIcon: mailSharp
-  }
+    mdIcon: mailSharp,
+  },
 ];
-
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -65,8 +75,20 @@ const Menu: React.FC = () => {
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
-                  <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
+                <IonItem
+                  className={
+                    location.pathname === appPage.url ? "selected" : ""
+                  }
+                  routerLink={appPage.url}
+                  routerDirection="none"
+                  lines="none"
+                  detail={false}
+                >
+                  <IonIcon
+                    slot="start"
+                    ios={appPage.iosIcon}
+                    md={appPage.mdIcon}
+                  />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>
