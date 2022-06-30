@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonCol,
   IonContent,
   IonGrid,
@@ -27,7 +28,7 @@ const ContactUs: React.FC = () => {
             </IonCol>
           </IonRow>
           <IonRow className="ion-justify-content-center">
-            <IonCol size="12" sizeLg="8">
+            <IonCol size="11" sizeLg="8">
               <IonItem>
                 <IonLabel color="tertiary" position="floating">
                   Nombre
@@ -37,7 +38,7 @@ const ContactUs: React.FC = () => {
             </IonCol>
           </IonRow>
           <IonRow className="ion-justify-content-center">
-            <IonCol size="12" sizeLg="8">
+            <IonCol size="11" sizeLg="8">
               <IonItem>
                 <IonLabel color="tertiary" position="floating">
                   Correo electronico
@@ -47,13 +48,20 @@ const ContactUs: React.FC = () => {
             </IonCol>
           </IonRow>
           <IonRow className="ion-justify-content-center">
-            <IonCol size="12" sizeLg="8">
+            <IonCol size="11" sizeLg="8">
               <IonItem>
                 <IonLabel color="tertiary" position="floating">
                   ¿De dónde nos visitas?
                 </IonLabel>
                 <IonTextarea></IonTextarea>
               </IonItem>
+            </IonCol>
+          </IonRow>
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="10" sizeLg="3" className="ion-text-center">
+              <IonButton color="primary" type="submit">
+                Enviar
+              </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

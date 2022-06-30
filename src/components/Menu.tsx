@@ -39,7 +39,7 @@ const appPages: AppPage[] = [
     mdIcon: homeSharp,
   },
   {
-    title: "Rutas Turísticas",
+    title: "Zonas Turísticas",
     url: "/page/tourist-routes",
     iosIcon: airplaneOutline,
     mdIcon: airplaneSharp,

@@ -16,7 +16,7 @@ function Modal(props: any) {
       <IonModal isOpen={props.isOpen}>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Modal</IonTitle>
+            <IonTitle style={{fontSize: '1.1rem'}}>{props.title}</IonTitle>
             <IonButtons slot="end">
               <IonButton onClick={props.onClose}>Aceptar</IonButton>
             </IonButtons>

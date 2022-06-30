@@ -5,8 +5,7 @@ const AboutUs: React.FC = () => {
   return (
     <IonPage>
       <Header title="Acerca de nosotros" />
-      <h1 className="ion-text-center">Acerca de nosotros</h1>
-      <IonGrid>
+      <IonGrid style={{ padding: ".8rem .8rem 0 .8rem" }}>
         <IonRow>
           <IonCol size="12" className="ion-text-justify">
             <p>
