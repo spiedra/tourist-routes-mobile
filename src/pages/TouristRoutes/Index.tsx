@@ -12,7 +12,11 @@ import { useState, useEffect } from 'react'
 import Header from '../../components/Header/Header'
 import Modal from '../../components/Modal'
 import { getTouristRoutesData } from '../../services/gets'
-import { getRandomImage, randomNumberByRange } from '../../utils'
+import {
+  getMapCoordinates,
+  getRandomImage,
+  randomNumberByRange,
+} from '../../utils'
 
 const TouristRoutes: React.FC = () => {
   const [data, setData] = useState<any>([])
@@ -20,18 +24,23 @@ const TouristRoutes: React.FC = () => {
   const [touristRoutesData, setTouristRoutesData] = useState([])
   const [modalData, setModalData] = useState<any>()
 
-  useEffect(()=>{
-    getTouristRoutesData().then((response:any) =>{
+  useEffect(() => {
+    getTouristRoutesData().then((response: any) => {
       setData(response)
       setTouristRoutesData(response)
     })
   }, [])
 
   const handleOnClick = (index: number) => {
-    setModalData(
-      touristRoutesData[index]
-    )
+    setModalData(touristRoutesData[index])
     setIsModalOpen(true)
+  }
+
+  const getLocation = () => {
+    const { x, y } = getMapCoordinates(randomNumberByRange(0, 9))
+    return (
+      'https://maps.google.com/?ll=' + x + ',' + y + '&z=14&t=m&output=embed'
+    )
   }
 
   React.useEffect(() => {
@@ -42,13 +51,13 @@ const TouristRoutes: React.FC = () => {
       setData(response)
     })
   }, [])
-  
+
   const modalBody = (
     <>
       {modalData ? (
-        <>
+        <div style={{ padding: "0 .8rem .8rem" }}>
           <h1>{modalData.name}</h1>
-          <h2>{modalData.location}</h2>
+          <h3>{modalData.location}</h3>
           <IonGrid>
             <IonRow>
               <img
@@ -56,8 +65,19 @@ const TouristRoutes: React.FC = () => {
                 alt='Imagen lugar turístico'
               />
             </IonRow>
+            <h3>Localización en Mapa</h3>
+            <IonRow>
+              <iframe title='unique'
+                src={getLocation()}
+                width='100%'
+                height='450'
+                style={{ border: 0 }}
+                loading='lazy'
+                referrerPolicy='no-referrer-when-downgrade'
+              ></iframe>
+            </IonRow>
           </IonGrid>
-        </>
+        </div>
       ) : (
         'Cargando'
       )}
