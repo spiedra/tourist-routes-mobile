@@ -30,3 +30,20 @@ export const randomNumberByRange = (lower:number, upper:number) => {
   random = Math.floor(random)
   return lower + random
 }
+
+export const getMapCoordinates = (random) => {
+  const coordinates = {
+    0: { x: 24.28041, y: -98.77857 },
+    1: { x: 23.28514, y: -102.99732 },
+    2: { x: 25.62407, y: -103.49171 },
+    3: { x: 27.02330, y: -101.41529 },
+    4: { x: 20.68767, y: -101.65699 },
+    5: { x: 22.710, y: -102.54847 },
+    6: { x: 24.02175, y: -102.99342 },
+    7: { x: 21.92304, y: -102.67481 },
+    8: { x: 20.77190, y: -101.42787 },
+    9: { x: 18.25582, y: -99.47779 },
+    10: { x: 17.18841, y: -96.67628 }
+  }
+  return coordinates[random]
+}
